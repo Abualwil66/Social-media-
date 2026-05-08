@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { SiSnapchat } from 'react-icons/si';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Tooltip,
@@ -25,11 +26,11 @@ const USER = {
   name: 'Waleed Khalid Bakri',
   title: 'Developer • IT • Markting',
   bio: 'i love learning any thing print money , and sharing knowledge also solving problem of other .',
-  avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Waleed',
+  avatar: '/myself.jpeg',
   links: {
     github: 'your-github',
     twitter: 'your-twitter',
-    instagram: 'waleed',
+    instagram: 'abuali',
     youtube: 'your-youtube',
     linkedin: 'your-linkedin',
     website: 'https://yourwebsite.com',
@@ -41,17 +42,17 @@ const USER = {
 const socialLinks = [
   {
     name: 'GitHub',
-    url: `https://github.com/${USER.links.github}`,
+    url: 'https://github.com/Abualwil66',
     icon: Github,
     bg: 'bg-[#24292e] hover:bg-[#1b1f23]',
     desc: 'Code & projects',
   },
   {
-    name: 'Twitter / X',
-    url: `https://twitter.com/${USER.links.twitter}`,
-    icon: Twitter,
-    bg: 'bg-[#1da1f2] hover:bg-[#1a91da]',
-    desc: 'Thoughts & insights',
+    name: 'Snapchat',
+    url: `https://snapchat.com/add/abualwil1`,
+    icon: SiSnapchat,
+    bg: 'bg-yellow-400 hover:bg-yellow-500',
+    desc: 'Follow me on Snap',
   },
   {
     name: 'Instagram',
@@ -62,7 +63,7 @@ const socialLinks = [
   },
   {
     name: 'LinkedIn',
-    url: `https://linkedin.com/in/${USER.links.linkedin}`,
+    url: `https://linkedin.com/in/waleed-bakri-b467942aa`,
     icon: Linkedin,
     bg: 'bg-[#0077b5] hover:bg-[#00669c]',
     desc: 'Professional profile',
@@ -99,11 +100,13 @@ export default function Home() {
 
       <div className="relative z-10 max-w-xl mx-auto px-4 py-12">
         {/* Profile */}
-        <div className="text-center mb-10">
-          <Avatar className="w-28 h-28 mx-auto ring-2 ring-white/20 shadow-xl">
-            <AvatarImage src={USER.avatar} />
-            <AvatarFallback className="text-2xl">WL</AvatarFallback>
-          </Avatar>
+        <div className="flex flex-col items-center justify-center text-center mb-10">
+        <Avatar className="w-28 h-28 overflow-hidden">
+          <AvatarImage
+          src={USER.avatar}
+          className="object-cover w-full h-full"
+          />
+        </Avatar>
 
           <h1 className="text-3xl font-bold text-white mt-4">
             {USER.name}
@@ -137,6 +140,17 @@ export default function Home() {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
+                {/* CV */}
+               <a
+                 href="/-cv.docx"
+                 target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-slate-400 hover:text-white text-sm px-3 py-1.5 rounded-lg hover:bg-white/10 transition"
+                   >
+                  <ExternalLink className="w-4 h-4" />
+                   CV
+                </a>
+
           </div>
         </div>
 
