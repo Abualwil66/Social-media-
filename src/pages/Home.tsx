@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+
 import { SiSnapchat } from 'react-icons/si';
 import { Card, CardContent } from '@/components/ui/card';
 import {
