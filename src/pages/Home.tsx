@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-
 import { SiSnapchat } from 'react-icons/si';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -171,7 +170,7 @@ export default function Home() {
                 <Card className={`${link.bg} border-0 transition-all hover:scale-[1.02]`}>
                   <CardContent className="p-4 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <Icon className="w-5 h-5 text-white" />
+                    
                       <div>
                         <p className="text-white font-medium">
                           {link.name}
